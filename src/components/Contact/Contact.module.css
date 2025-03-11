@@ -1,0 +1,22 @@
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 350px;
+  width: 100%;
+  padding: 10px;
+
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.delBtn {
+  font-size: 20px;
+}
+
+.contactTextInfo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  gap: 10px;
+}

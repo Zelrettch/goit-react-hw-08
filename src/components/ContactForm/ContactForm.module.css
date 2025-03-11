@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+}
+
+.form {
+  display: block;
+  padding: 10px;
+  max-width: 350px;
+  border: 2px solid black;
+  border-radius: 5px;
+  min-width: 350px;
+}
+
+.error {
+  display: block;
+  font-size: 15px;
+  color: red;
+}
+
+.field {
+  display: block;
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+}
+
+.caption {
+  font-size: 20px;
+  display: block;
+}
+
+.addBtn {
+  display: block;
+  font-size: 20px;
+  margin: 10px auto 0;
+}
