@@ -16,11 +16,12 @@ export default function Contact({ data }) {
     <li className={css.contact}>
       <div className={css.container}>
         <div className={css.contactTextInfo}>
-          <FaPhone size="20" />
+          <FaUserLarge size="20" />
           <p>{data.name}</p>
         </div>
         <div className={css.contactTextInfo}>
-          <FaUserLarge size="20" />
+          <FaPhone size="20" />
+
           <p>{data.number}</p>
         </div>
       </div>
