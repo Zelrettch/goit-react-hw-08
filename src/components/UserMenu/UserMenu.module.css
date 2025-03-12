@@ -1,0 +1,39 @@
+.btn svg {
+  display: block;
+  transition: fill 0.3s ease;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: #b9ff66;
+}
+
+.btn:hover svg {
+  fill: #b9ff66;
+}
+
+.block {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  justify-content: flex-end;
+}
+
+.text {
+  display: block;
+  padding: 20px 0;
+  max-width: 300px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

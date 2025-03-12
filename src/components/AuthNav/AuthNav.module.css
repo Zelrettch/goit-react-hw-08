@@ -1,0 +1,16 @@
+.link {
+  padding: 20px 0;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #b9ff66;
+}
+
+.block {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 350px;
+  justify-content: flex-end;
+}

@@ -1,0 +1,35 @@
+.page {
+  margin-top: 50px;
+}
+
+.page li {
+  margin-bottom: 20px;
+}
+
+.page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page svg {
+  display: block;
+  fill: #191a23;
+  transition: fill 0.3s ease;
+}
+
+.page a {
+  margin: auto;
+  border-radius: 50%;
+  width: fit-content;
+  padding: 30px;
+  border: #191a23 solid 3px;
+  transition: border-color 0.3s ease;
+}
+
+.page a:hover svg {
+  fill: #b9ff66;
+}
+
+.page a:hover {
+  border-color: #b9ff66;
+}

@@ -2,7 +2,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
 import css from "./LoginForm.module.css";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
 import { login } from "../../redux/auth/operations";
 import { useDispatch } from "react-redux";
 
@@ -28,11 +27,9 @@ export default function RegistrationForm() {
   const dispatch = useDispatch();
   const emailId = useId();
   const passId = useId();
-  const navigate = useNavigate();
 
   function handleSubmit(data) {
     dispatch(login(data));
-    navigate("/");
   }
   return (
     <Formik
@@ -41,28 +38,37 @@ export default function RegistrationForm() {
       onSubmit={handleSubmit}
     >
       <Form className={css.container}>
-        <label htmlFor={emailId} className={css.caption}>
-          Email
-        </label>
-        <Field
-          type="text"
-          name="email"
-          id={emailId}
-          className={css.field}
-        ></Field>
-        <ErrorMessage className={css.error} name="email" component="span" />
+        <h1 className={css.header}>Sign in to your account</h1>
+        <div className={css.fieldBlock}>
+          <label htmlFor={emailId} className={css.caption}>
+            Email
+          </label>
+          <Field
+            type="text"
+            name="email"
+            id={emailId}
+            className={css.field}
+          ></Field>
+          <ErrorMessage className={css.error} name="email" component="span" />
+        </div>
 
-        <label htmlFor={passId} className={css.caption}>
-          Password
-        </label>
-        <Field
-          type="password"
-          name="password"
-          id={passId}
-          className={css.field}
-        ></Field>
-        <ErrorMessage className={css.error} name="password" component="span" />
-        <button type="submit" className={css.addBtn}>
+        <div className={css.fieldBlock}>
+          <label htmlFor={passId} className={css.caption}>
+            Password
+          </label>
+          <Field
+            type="password"
+            name="password"
+            id={passId}
+            className={css.field}
+          ></Field>
+          <ErrorMessage
+            className={css.error}
+            name="password"
+            component="span"
+          />
+        </div>
+        <button type="submit" className={css.btn}>
           Login
         </button>
       </Form>

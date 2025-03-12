@@ -1,13 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-
-const api = axios.create({
-  baseURL: "https://connections-api.goit.global",
-});
-
-function setToken(token) {
-  api.defaults.headers.common.Authorization = `Bearer ${token}`;
-}
+import api from "../../api/swagger-api";
+import { setToken, clearToken } from "../../api/swagger-api";
 
 export const register = createAsyncThunk(
   "auth/register",
@@ -35,8 +28,25 @@ export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
 export const logout = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
   try {
     const { data } = await api.post("/users/logout");
+    clearToken();
     return data;
   } catch (e) {
     return thunkAPI.rejectWithValue(e);
   }
 });
+
+export const refreshUser = createAsyncThunk(
+  "auth/refresh",
+  async (_, thunkAPI) => {
+    const token = thunkAPI.getState().auth.token;
+    if (!token) return thunkAPI.rejectWithValue("Unauthorized");
+
+    setToken(token);
+    try {
+      const { data } = await api.get("/users/current");
+      return data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e);
+    }
+  }
+);

@@ -49,27 +49,35 @@ export default function ContactForm() {
         onSubmit={handleSubmit}
       >
         <Form className={css.form}>
-          <label htmlFor={nameId} className={css.caption}>
-            Name
-          </label>
-          <Field
-            type="text"
-            name="name"
-            id={nameId}
-            className={css.field}
-          ></Field>
-          <ErrorMessage className={css.error} name="name" component="span" />
+          <div className={css.fieldBlock}>
+            <label htmlFor={nameId} className={css.caption}>
+              Name
+            </label>
+            <Field
+              type="text"
+              name="name"
+              id={nameId}
+              className={css.field}
+            ></Field>
+            <ErrorMessage className={css.error} name="name" component="span" />
+          </div>
 
-          <label htmlFor={telId} className={css.caption}>
-            Number
-          </label>
-          <Field
-            type="tel"
-            name="number"
-            id={telId}
-            className={css.field}
-          ></Field>
-          <ErrorMessage className={css.error} name="number" component="span" />
+          <div className={css.fieldBlock}>
+            <label htmlFor={telId} className={css.caption}>
+              Number
+            </label>
+            <Field
+              type="tel"
+              name="number"
+              id={telId}
+              className={css.field}
+            ></Field>
+            <ErrorMessage
+              className={css.error}
+              name="number"
+              component="span"
+            />
+          </div>
 
           <button type="submit" className={css.addBtn}>
             Add contact

@@ -1,0 +1,25 @@
+.link {
+  color: #000000;
+  padding: 20px 0;
+  display: block;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #b9ff66;
+}
+
+.active::after {
+  color: #ffffff;
+  background-color: #102536;
+  display: block;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #b9ff66;
+  border-radius: 2px;
+  bottom: -1px;
+  left: 0;
+  position: absolute;
+}

@@ -1,7 +1,12 @@
 body {
-  font-family: sans-serif;
-  line-height: 1.5;
-  font-size: 30px;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.4;
+  font-size: 20px;
+  color: #000000;
+  scrollbar-gutter: stable;
+}
+html {
+  scrollbar-gutter: stable;
 }
 
 h1,
@@ -24,4 +29,16 @@ ol {
 img {
   display: block;
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  display: block;
+}
+
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
 }

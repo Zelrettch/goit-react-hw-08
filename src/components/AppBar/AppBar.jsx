@@ -7,11 +7,11 @@ import UserMenu from "../UserMenu/UserMenu";
 
 export default function Header() {
   const isLogged = useSelector(selectIsLoggedIn);
-
   return (
     <nav className={css.nav}>
+      <h1 className={css.logo}>Phonebook</h1>
       <Navigation />
-      <p> {isLogged ? <UserMenu /> : <AuthNav />}</p>
+      {isLogged ? <UserMenu /> : <AuthNav />}
     </nav>
   );
 }

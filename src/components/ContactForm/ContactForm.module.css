@@ -1,36 +1,67 @@
 .container {
   display: flex;
+  margin-top: 50px;
+  padding-bottom: 50px;
 }
 
 .form {
+  margin: auto;
   display: block;
-  padding: 10px;
-  max-width: 350px;
-  border: 2px solid black;
-  border-radius: 5px;
+  padding: 60px;
+  width: 600px;
+  border-radius: 45px;
   min-width: 350px;
+  background-color: #f3f3f3;
 }
 
 .error {
   display: block;
   font-size: 15px;
   color: red;
+  text-align: right;
 }
 
 .field {
   display: block;
   font-size: 20px;
-  padding: 5px;
+  padding: 16px 30px;
+  border: 1px solid black;
+  border-radius: 14px;
   width: 100%;
+  margin-bottom: 5px;
+  outline: none;
+}
+
+.fieldBlock {
+  height: 110px;
+}
+
+.fieldBlock:last-of-type {
+  margin-bottom: 30px;
 }
 
 .caption {
-  font-size: 20px;
+  font-size: 16px;
   display: block;
+  margin-bottom: 5px;
 }
 
 .addBtn {
   display: block;
-  font-size: 20px;
+  width: 100%;
   margin: 10px auto 0;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #191a23;
+  padding: 20px 0;
+  border: none;
+  border-radius: 14px;
+
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.addBtn:hover {
+  background-color: #b9ff66;
+  color: #191a23;
 }

@@ -4,7 +4,6 @@ import css from "./RegistrationForm.module.css";
 import * as Yup from "yup";
 import { register } from "../../redux/auth/operations";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 
 const innitials = {
   name: "",
@@ -46,39 +45,50 @@ export default function RegistrationForm() {
       onSubmit={handleSubmit}
     >
       <Form className={css.container}>
-        <label htmlFor={nameId} className={css.caption}>
-          Name
-        </label>
-        <Field
-          type="text"
-          name="name"
-          id={nameId}
-          className={css.field}
-        ></Field>
-        <ErrorMessage className={css.error} name="name" component="span" />
+        <h1 className={css.header}>Create your account</h1>
+        <div className={css.fieldBlock}>
+          <label htmlFor={nameId} className={css.caption}>
+            Name
+          </label>
+          <Field
+            type="text"
+            name="name"
+            id={nameId}
+            className={css.field}
+          ></Field>
+          <ErrorMessage className={css.error} name="name" component="span" />
+        </div>
 
-        <label htmlFor={emailId} className={css.caption}>
-          Email
-        </label>
-        <Field
-          type="text"
-          name="email"
-          id={emailId}
-          className={css.field}
-        ></Field>
-        <ErrorMessage className={css.error} name="email" component="span" />
+        <div className={css.fieldBlock}>
+          <label htmlFor={emailId} className={css.caption}>
+            Email
+          </label>
+          <Field
+            type="text"
+            name="email"
+            id={emailId}
+            className={css.field}
+          ></Field>
+          <ErrorMessage className={css.error} name="email" component="span" />
+        </div>
 
-        <label htmlFor={passId} className={css.caption}>
-          Password
-        </label>
-        <Field
-          type="password"
-          name="password"
-          id={passId}
-          className={css.field}
-        ></Field>
-        <ErrorMessage className={css.error} name="password" component="span" />
-        <button type="submit" className={css.addBtn}>
+        <div className={css.fieldBlock}>
+          <label htmlFor={passId} className={css.caption}>
+            Password
+          </label>
+          <Field
+            type="password"
+            name="password"
+            id={passId}
+            className={css.field}
+          ></Field>
+          <ErrorMessage
+            className={css.error}
+            name="password"
+            component="span"
+          />
+        </div>
+        <button type="submit" className={css.btn}>
           Register
         </button>
       </Form>

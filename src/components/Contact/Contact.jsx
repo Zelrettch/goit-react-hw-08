@@ -1,4 +1,5 @@
 import css from "./Contact.module.css";
+import { MdDeleteForever } from "react-icons/md";
 
 import { FaPhone } from "react-icons/fa6";
 import { FaUserLarge } from "react-icons/fa6";
@@ -13,13 +14,13 @@ export default function Contact({ data }) {
   }
   return (
     <li className={css.contact}>
-      <div>
+      <div className={css.container}>
         <div className={css.contactTextInfo}>
-          <FaPhone size="15" />
+          <FaPhone size="20" />
           <p>{data.name}</p>
         </div>
         <div className={css.contactTextInfo}>
-          <FaUserLarge size="15" />
+          <FaUserLarge size="20" />
           <p>{data.number}</p>
         </div>
       </div>
@@ -28,7 +29,7 @@ export default function Contact({ data }) {
         className={css.delBtn}
         onClick={() => handleDelete(data.id)}
       >
-        Delete
+        <MdDeleteForever size="45px" />
       </button>
     </li>
   );

@@ -1,15 +1,4 @@
-.link {
-  color: #c7c7c7;
-  padding: 10px;
-  display: block;
-}
-
-.header {
-  padding: 0px 20px;
-  background-color: #16334a;
-}
-
-.active {
-  color: #ffffff;
-  background-color: #102536;
+.block {
+  display: flex;
+  gap: 20px;
 }

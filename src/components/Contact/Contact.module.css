@@ -2,21 +2,55 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 350px;
+  max-width: 445px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 40px;
 
-  border: 2px solid black;
-  border-radius: 5px;
+  border: 1px solid black;
+  border-bottom-width: 5px;
+  border-radius: 45px;
+  gap: 40px;
 }
 
 .delBtn {
   font-size: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.delBtn svg {
+  display: block;
+  transition: fill 0.3s ease;
+}
+
+.delBtn:hover svg {
+  fill: red;
 }
 
 .contactTextInfo {
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 25px;
   gap: 10px;
+  height: 100%;
+}
+
+.contactTextInfo:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+
+.contactTextInfo p {
+  word-break: break-word;
+  flex-grow: 0;
+}
+
+.contactTextInfo svg {
+  flex-shrink: 0;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }

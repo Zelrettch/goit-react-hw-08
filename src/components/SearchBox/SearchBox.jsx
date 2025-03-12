@@ -13,10 +13,8 @@ export default function SearchBox() {
   }
   return (
     <div className={css.searchBlock}>
-      <label htmlFor={filterId} className={css.caption}>
-        Find Contacts by name
-      </label>
       <input
+        placeholder="Find Contacts by name"
         className={css.field}
         type="text"
         name="filter"

@@ -3,15 +3,13 @@
   font-size: 20px;
   padding: 5px;
   width: 100%;
-}
-
-.caption {
-  display: block;
-  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
 }
 
 .searchBlock {
-  max-width: 350px;
   width: 100%;
-  margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 30px;
 }

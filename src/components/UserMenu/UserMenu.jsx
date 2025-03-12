@@ -1,13 +1,22 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import css from "./UserMenu.module.css";
-import { selectEmail } from "../../redux/auth/selectors";
+import { selectName } from "../../redux/auth/selectors";
+import { logout } from "../../redux/auth/operations";
+import { CiLogout } from "react-icons/ci";
 
 export default function UserMenu() {
-  const email = useSelector(selectEmail);
+  const name = useSelector(selectName);
+  const dispatch = useDispatch();
+  function handleLogout() {
+    dispatch(logout());
+  }
+
   return (
-    <div>
-      <p>Welcome {email}</p>
-      <button type="button">Logout</button>
+    <div className={css.block}>
+      <p className={css.text}>Welcome {name}!</p>
+      <button type="button" onClick={handleLogout} className={css.btn}>
+        <CiLogout size="28px" />
+      </button>
     </div>
   );
 }
