@@ -4,8 +4,9 @@ import { register, login, logout, refreshUser } from "./operations";
 
 function showError(state, action) {
   const e = action.payload;
-  console.log(e);
-  const message = e.status === 400 ? e.response.data.message : e.message;
+  let message;
+  if (e.status === 400) message = e.response.data.message ?? "Invalid data";
+  else message = e.message;
   toast.error(message);
 }
 

@@ -59,7 +59,7 @@ export default function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-      <Toaster></Toaster>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 }
