@@ -2,11 +2,9 @@ import css from "./ContactForm.module.css";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { addContact } from "../../redux/contacts/operations";
-import ErrorBlock from "../ErrorBlock/ErrorBlock";
-import { selectError } from "../../redux/contacts/selectors";
 
 const innitials = {
   name: "",
@@ -31,7 +29,6 @@ const ContactSchema = Yup.object().shape({
 });
 
 export default function ContactForm() {
-  const error = useSelector(selectError);
   const nameId = useId();
   const telId = useId();
   const dispatch = useDispatch();
@@ -84,7 +81,6 @@ export default function ContactForm() {
           </button>
         </Form>
       </Formik>
-      {error && <ErrorBlock message={error} />}
     </div>
   );
 }
