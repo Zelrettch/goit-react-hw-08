@@ -14,7 +14,7 @@ export default function SearchBox() {
   return (
     <div className={css.searchBlock}>
       <input
-        placeholder="Find Contacts by name"
+        placeholder="Find Contacts by name or phone number"
         className={css.field}
         type="text"
         name="filter"
